@@ -18,7 +18,7 @@ git pull <远程主机名> <远程分支名> : <本地分支名>
 git pull
 ```
 
-更多有关于 pull 指令的知识可见 [pull 指令](https://www.yiibai.com/git/git_pull.html)链接
+更多有关于 pull 指令的知识可见 [pull 指令](https://www.yiibai.com/git/git_pull.html)
 
 
 
