@@ -39,9 +39,43 @@ ssh-keygen -t rsa -C "你的用户邮箱"
 cat ~/.ssh/id_rsa.pub
 ```
 
-复制公钥文件内容，进入自己的Github账号，进入 账户 >> Setting >> SSH and GPG keys 一栏，选择 New SSH，其中的 Title 可以任意填写，将刚才复制的公钥文件内容粘贴到 Key 一栏中，点击 add ssh key 即可。
+复制公钥文件内容，进入自己的Github账号，进入 账户 >> Setting >> SSH and GPG keys 一栏，选择 New SSH，其中的 Title 可以任意填写，将刚才复制的公钥文件内容粘贴到 Key 一栏中，点击 add ssh key 即可。配置完 user.name 和 user.email 以及 ssh 公钥之后，本地的Git和远程的Github重要可以远程通信了。
 
-![Github ssh key 配置](D:\github\git-practice\picture\github ssh key 配置.png)
+### Git和Github的链接
+
+在完成Git的配置以及本地Git和远程Github账号的链接之后，需要将本地的仓库和远程Github中的仓库（repository）进行链接，也就是在本地仓库的任意修改可以通过链接将远程Github仓库中的内容也进行修改，这也是Github这样代码托管网站最大的作用。对于本地仓库和Github仓库的链接，一般有两种方式。
+
+#### Github上已有仓库
+
+可以在本地新建一个文件夹，在该文件夹内打开Git Bash，然后输入以下指令，就可将Github上的仓库复制到新建文件夹中。
+
+```
+git clone git@github.com:polaris-chn/git-practice.git
+```
+
+其中 clone 之后的内容是Github上仓库的 ssh 地址，这样就把Github上仓库的内容下载下来了。
+
+#### Github上没有仓库
+
+如果Github没有仓库，则本地仓库和Github上仓库的链接比较麻烦。
+
+首先在本地新建文件夹作为本地仓库，进入新建文件夹打开Git Bash输入以下指令初始化本地仓库。
+
+```
+git init
+```
+
+然后在Github上新建一个仓库，不要在初始化的时候加入README.md文件（其实初始化README.md也可以，后续有相应的解决办法），然后在本地仓库的Git Bash中输入以下指令，建立两个仓库之间的链接。
+
+```
+git remote add origin git@github.com:polaris-chn/git-practice.git
+```
+
+其中origin是本地仓库，后面的部分是Github仓库的 ssh 地址。至此，Git和Github之间就建立了链接。
+
+
+
+
 
 
 
