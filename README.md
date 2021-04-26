@@ -41,5 +41,9 @@ cat ~/.ssh/id_rsa.pub
 
 复制公钥文件内容，进入自己的Github账号，进入 账户 >> Setting >> SSH and GPG keys 一栏，选择 New SSH，其中的 Title 可以任意填写，将刚才复制的公钥文件内容粘贴到 Key 一栏中，点击 add ssh key 即可。
 
+![Github ssh key 配置](D:\github\git-practice\picture\github ssh key 配置.png)
+
+
+
 
 
